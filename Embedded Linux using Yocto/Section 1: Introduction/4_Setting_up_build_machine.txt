@@ -1,0 +1,9 @@
+Prerequisites
+------------------------------------
+	1. 50 Gbytes of free disk space
+	2. Runs a supported Linux distribution (i.e. recent release of Fedora, openSUSE, CentOS, Debian, or Ubuntu)
+	3.  Git 1.8.3.1 or greater
+	Tar 1.27 or greater
+	Python 3.4.0 or greater
+	
+Packages and package installation vary depending on your development system.
