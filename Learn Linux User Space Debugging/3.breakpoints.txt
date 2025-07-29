@@ -1,0 +1,46 @@
+# Breakpoints
+  Breakpoints can be used to stop the program run in the middle, at a designated point.
+  Whenever gdb gets to a breakpoint it halts execution of ur program and allows u to examine it.
+  Simplest way of putting a breakpoint is using func name or line number.
+
+  (gdb) break factorial
+  Breakpoint 1 at 0x400538: file source_code.c, line 5
+
+  (gdb) break 7
+  Breakpoint 2 at 0x400545: file source_code.c, line 7
+
+# List of functions available
+  (gdb) info functions
+
+# List of breakpoints avaiable
+  (gdb) info breakpoints 
+
+# Run the program and it will stop at the first breakpoint
+  (gdb) r
+
+# Delete Breakpoints
+  (gdb) delete <bpnumber>
+
+# Disable/Enable Breakpoints
+  (gdb) disable <bpnumber>
+  (gdb) enable <bpnumber>
+# Step by step
+  Once u have hit a breakpoint, u can have fine control over the execution of the program, using the following commands
+  Typing 'run' again instead of 'continue' would restart the program from the beginning.
+  1/ (gdb) next
+  Proceed to the next line of execution (Doesn't step into a funciton call in the current line)
+  2/ (gdb) step
+  The same as next, but with difference that if u are at a function call
+    next - the func will execute and return
+    step - step into the first line of the called func
+  3/ (gdb) finish
+  Finish executing the current function, the pause (also called step out). Useful if u accidentally stepped into a funciton.
+  4/ (gdb) print n
+  The print command prints the value of the variable specified
+  5/ (gdb) print/x n
+  Prints the value in hexadecimal
+
+# Tip 
+  Typing "step" or "next" a lot of times can be tedious. If u just press ENTER, gdb will repeat the same command u just gave it.
+  
+  
